@@ -1,0 +1,7 @@
+example_templates.templates:
+  path: '/example-templates'
+  defaults:
+    _controller: '\Drupal\example_templates\Controller\TemplateController::templates'
+    _title: 'Example Templates'
+  requirements:
+    _permission: 'access content'

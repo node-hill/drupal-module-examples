@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ *
+ * This hook lets us register template files in Drupal 8 that can then be used
+ * to render various content with the help of a template file.
+ *
+ * @see https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/group/themeable/8.2.x
+ */
+function example_templates_theme() {
+  return [
+    'example_link' => [
+      'variables' => [
+        'text' => null,
+        'url' => null,
+      ],
+    ],
+    'example_colors' => [
+      'variables' => [
+        'colors' => [],
+      ],
+    ],
+    'example_date' => [
+      'variables' => [
+        'date' => null,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ *
+ * This template hook lets us process the values supplied with the render array
+ * before they are sent to the template.
+ *
+ * @see https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/group/themeable/8.2.x
+ */
+function template_preprocess_example_link(&$variables) {
+  // Create an Url object from the url variable.
+  $url = \Drupal\Core\Url::fromUri($variables['url']);
+
+  // Set a new variable that is the full link object.
+  $variables['link'] = \Drupal\Core\Link::fromTextAndUrl($variables['text'], $url);
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ */
+function template_preprocess_example_date(&$variables) {
+  // If the date variable is not set we default the date to now. Otherwise if
+  // a date has ben set but is a string we transform it to a DateTime object.
+  if (!isset($variables['date'])) {
+    $variables['date'] = new DateTime('now');
+  }
+  elseif (is_string($variables['date'])) {
+    $variables['date'] = new DateTime($variables['date']);
+  }
+}

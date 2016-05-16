@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default implementation of the example loop.
+ *
+ * Available variables:
+ * - colors: An array of colors.
+ */
+#}
+<h2>Colors</h2>
+
+{% if colors %}
+  <ul class="colors">
+    {% for color in colors %}
+      <li class="color color-{{ color|lower }}">
+        {{ color }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
