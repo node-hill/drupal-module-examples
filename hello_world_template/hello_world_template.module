@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ *
+ * This hook lets us register template files in Drupal 8 that can then be used to render various content with the help of a template file.
+ *
+ * @see https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/group/themeable/8.2.x
+ */
+function hello_world_template_theme() {
+  return [
+    'hello_world' => [
+      'variables' => [
+        'message' => null,
+      ],
+    ],
+  ];
+}

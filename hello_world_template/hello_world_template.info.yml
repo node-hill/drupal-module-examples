@@ -1,0 +1,5 @@
+name: Hello World Template
+description: 'This module extends on the hello world module to use a template instead of plain markup.'
+type: module
+package: 'Custom'
+core: 8.x
