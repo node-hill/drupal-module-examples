@@ -1,0 +1,5 @@
+name: Hello World
+description: 'A module that demonstrates simple routing and controllers.'
+type: module
+package: 'Custom'
+core: 8.x
