@@ -1,0 +1,7 @@
+hello_world_form.content:
+  path: '/hello-world-form'
+  defaults:
+    _title: 'Hello World Form'
+    _form: '\Drupal\hello_world_form\Form\HelloWorldForm'
+  requirements:
+    _access: 'TRUE'

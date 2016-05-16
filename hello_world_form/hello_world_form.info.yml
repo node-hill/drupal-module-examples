@@ -1,0 +1,5 @@
+name: Hello World Form
+description: 'A module that demonstrates forms in Drupal.'
+type: module
+package: 'Custom'
+core: 8.x
