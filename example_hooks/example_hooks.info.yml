@@ -1,0 +1,5 @@
+name: 'Example: Hooks'
+description: 'This module contains various hook implementations.'
+type: module
+package: 'Custom'
+core: 8.x

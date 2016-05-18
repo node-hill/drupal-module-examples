@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * This is the main module file for the example hooks module. This module
+ * contains simple examples of hook usage in Drupal 8.
+ */
+
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_node_presave().
+ */
+function example_hooks_node_presave(Drupal\Core\Entity\EntityInterface $node) {
+  $node->setTitle('I change all the titles before save!');
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function example_hooks_user_login(Drupal\user\UserInterface $account) {
+  drupal_set_message(new TranslatableMarkup('Welcome back @username, nice to see you again!', [
+    '@username' => $account->getUsername(),
+  ]));
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function example_hooks_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['remember_me'] = [
+    '#type' => 'checkbox',
+    '#title' => new TranslatableMarkup('Remember me'),
+    '#description' => new TranslatableMarkup('Please remember me for two weeks.'),
+  ];
+}
