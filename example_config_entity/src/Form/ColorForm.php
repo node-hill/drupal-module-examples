@@ -59,6 +59,16 @@ class ColorForm extends EntityForm {
       ],
     ];
 
+    // The hex color code for this color.
+    $form['color_code'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Color code'),
+      '#maxlength' => 255,
+      '#default_value' => $this->entity->getColorCode(),
+      '#description' => $this->t('Specify the color code for this color.'),
+      '#required' => TRUE,
+    ];
+
     return $form;
   }
 

@@ -8,3 +8,6 @@ example_config_entity.color.*:
     label:
       type: label
       label: 'Label'
+    color_code:
+      type: string
+      label: 'Color code'
