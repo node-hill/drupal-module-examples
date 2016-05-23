@@ -1,0 +1,5 @@
+entity.color.add_form:
+  route_name: 'entity.color.add_form'
+  title: 'Add Color'
+  appears_on:
+    - entity.color.collection

@@ -1,0 +1,5 @@
+name: 'Example: Config Entity'
+description: 'Basic module that demonstrates the configuration entity.'
+type: module
+package: 'Custom'
+core: 8.x

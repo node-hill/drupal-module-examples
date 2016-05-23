@@ -1,0 +1,10 @@
+example_config_entity.color.*:
+  type: config_entity
+  label: 'Example color'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'

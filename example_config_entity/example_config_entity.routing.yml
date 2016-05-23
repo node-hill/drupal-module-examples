@@ -1,0 +1,31 @@
+entity.color.collection:
+  path: '/admin/config/system/example_config_entity'
+  defaults:
+    _entity_list: 'color'
+    _title: 'Color Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.color.add_form:
+  path: '/admin/config/system/example_config_entity/add'
+  defaults:
+    _entity_form: 'color.add'
+    _title: 'Add color'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.color.edit_form:
+  path: '/admin/config/system/example_config_entity/{color}'
+  defaults:
+    _entity_form: 'color.edit'
+    _title: 'Edit color'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.color.delete_form:
+  path: '/admin/config/system/example_config_entity/{color}/delete'
+  defaults:
+    _entity_form: 'color.delete'
+    _title: 'Delete color'
+  requirements:
+    _permission: 'administer site configuration'
