@@ -1,0 +1,5 @@
+name: 'Movies'
+description: 'An example module implementing a content enity of Movies.'
+type: module
+package: 'Custom'
+core: 8.x

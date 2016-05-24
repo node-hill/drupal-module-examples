@@ -1,0 +1,59 @@
+# Movie settings form.
+movies.settings:
+  path: '/admin/structure/movies/settings'
+  defaults:
+    _form: '\Drupal\movies\Form\MovieSettingsForm'
+    _title: 'Movie Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Show a specific movie.
+entity.movie.canonical:
+  path: '/movie/{movie}'
+  defaults:
+    _entity_view: 'movie'
+    _title: 'Movie'
+  requirements:
+    _entity_access: 'movie.view'
+
+# Show a list of movies.
+entity.movie.collection:
+  path: '/admin/content/movies'
+  defaults:
+    _entity_list: 'movie'
+    _title: 'Movies'
+  requirements:
+    _permission: 'administer site configuration'
+
+# Add a new movie.
+entity.movie.add_form:
+  path: '/movie/add'
+  defaults:
+    _entity_form: 'movie.add'
+    _title: 'Add movie'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+# Edit an existing movie.
+entity.movie.edit_form:
+  path: '/movie/{movie}/edit'
+  defaults:
+    _entity_form: 'movie.edit'
+    _title: 'Edit movie'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+# Delete an existing movie.
+entity.movie.delete_form:
+  path: '/movie/{movie}/delete'
+  defaults:
+    _entity_form: 'movie.delete'
+    _title: 'Delete movie'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,25 @@
+
+# Movie settings tab.
+movie.settings_tab:
+  title: 'Settings'
+  route_name: movies.settings
+  base_route: movies.settings
+
+# Movie view tab.
+movie.view:
+  title: 'View'
+  route_name: entity.movie.canonical
+  base_route: entity.movie.canonical
+
+# Movie edit tab.
+movie.edit:
+  title: 'Edit'
+  route_name: entity.movie.edit_form
+  base_route: entity.movie.canonical
+
+# Movie delete tab.
+movie.delete:
+  title: 'Delete'
+  route_name: entity.movie.delete_form
+  base_route: entity.movie.canonical
+  weight: 10
