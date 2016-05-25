@@ -21,8 +21,8 @@ use Drupal\datetime\Plugin\Field\FieldType\DateTimeItem;
  *     "list_builder" = "Drupal\movies\MovieListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
  *     "form" = {
- *       "add" = "Drupal\Core\Entity\ContentEntityForm",
- *       "edit" = "Drupal\Core\Entity\ContentEntityForm",
+ *       "add" = "Drupal\movies\Entity\MovieForm",
+ *       "edit" = "Drupal\movies\Entity\MovieForm",
  *       "delete" = "Drupal\movies\Form\MovieDeleteForm",
  *     },
  *     "access" = "Drupal\Core\Entity\EntityAccessControlHandler",
