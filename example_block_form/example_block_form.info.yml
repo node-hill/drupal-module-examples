@@ -1,0 +1,5 @@
+name: 'Example: Block Form'
+description: 'Example module that demonstrates the usage of a from in a block.'
+type: module
+package: 'Custom'
+core: 8.x
